@@ -17,23 +17,24 @@
     function insertEl(){
       let data = [60,30,10,67,40];
       let newEl= document.getElementById("newEl").value;
-      let position =document.getElementById("position").value;
+      newEl = parseInt(newEl);
+      let position = document.getElementById("position").value;
       console.warn(data);
       for(let i= data.length-1;i>= 0; i--){
-        if(i>=position){
+        if(i >= position){
           data[i+1]=data[i];
-          if(i==position){
-            data[i]=newEl;
+          if(i == position){
+            data[i] = newEl;
           }
         }
       }
-      // console.warn(data)
+      console.warn(data)
     }
   </script>
 </head>
 <body>
   <input type="text" id="position" placeholder="enter position">
-  <input type="text"id="newEL" placeholder="enter new element">
+  <input type="text" id="newEl" placeholder="enter new element">
   <button onclick="insertEl()">Insert</button>
 </body>
 </html>
