@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Indirect Recursion</title>
+  <script>
+    let money = 100;
+    let apple = 0;
+    function buyApple(x) {
+      console.warn(x)
+    }
+    function buyMore(x) {
+      console.warn("buy more",x)
+    }
+    buyApple(money);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
